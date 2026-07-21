@@ -12,9 +12,9 @@
 [![Downloads](https://img.shields.io/visual-studio-marketplace/d/ric-v.postgres-explorer?style=for-the-badge&logo=visualstudiocode&logoColor=white&color=2ECC71)](https://marketplace.visualstudio.com/items?itemName=ric-v.postgres-explorer)
 [![Rating](https://img.shields.io/visual-studio-marketplace/r/ric-v.postgres-explorer?style=for-the-badge&logo=visualstudiocode&logoColor=white&color=F39C12)](https://marketplace.visualstudio.com/items?itemName=ric-v.postgres-explorer)
 [![Open VSX](https://img.shields.io/open-vsx/v/ric-v/nexql-themes?style=for-the-badge&logo=eclipseide&logoColor=white&label=open%20vsx&color=7C3AED)](https://open-vsx.org/extension/ric-v/nexql-themes)
-[![License](https://img.shields.io/badge/core-MIT-informational?style=for-the-badge)](https://github.com/NexQL-OSS/NexQL-core/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/core-MIT-informational?style=for-the-badge)](https://github.com/NexQL-OSS/core/blob/main/LICENSE)
 
-[**Docs**](https://nexql.astrx.dev/) · [**Themes preview**](https://nexql-themes.astrx.dev/) · [**Issues**](https://github.com/NexQL-OSS/NexQL-core/issues) · [**support@astrx.dev**](mailto:support@astrx.dev)
+[**Docs**](https://nexql.astrx.dev/) · [**Themes preview**](https://nexql-themes.astrx.dev/) · [**Issues**](https://github.com/NexQL-OSS/core/issues) · [**support@astrx.dev**](mailto:support@astrx.dev)
 
 
 <a href="https://www.producthunt.com/products/nexql?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-nexql" target="_blank" rel="noopener noreferrer"><img alt="NexQL - AI-native Postgres tooling, All in VS Code | Product Hunt" width="150" height="34" src="https://api.producthunt.com/widgets/embed-image/v1/featured.png?post_id=1198080&amp;theme=neutral&amp;t=1784198674691"></a>
@@ -83,23 +83,23 @@ nexql=# \dt
               List of relations
      Name      |   Type    | Access  |  License
 ---------------+-----------+---------+-----------
- NexQL-core    | extension | public  | MIT
- NexQL-Themes  | themes    | public  | MIT
- NexQL-site    | website   | public  | —
+ core          | extension | public  | MIT
+ vsc-themes    | themes    | public  | MIT
+ website       | website   | public  | —
  .github       | meta      | public  | Apache-2.0
- NexQL-Pro     | addon     | private | proprietary
- NexQL-Backend | api       | private | proprietary
+ pro           | addon     | private | proprietary
+ backend       | api       | private | proprietary
 (6 rows)
 ```
 
 | Repo | What it is |
 | --- | --- |
-| [**NexQL-core**](https://github.com/NexQL-OSS/NexQL-core) | The VS Code extension — explorer, SQL notebooks, dashboard, table designer, safety layer. MIT. [Install ↗](https://marketplace.visualstudio.com/items?itemName=ric-v.postgres-explorer) |
-| [**NexQL-Themes**](https://github.com/NexQL-OSS/NexQL-Themes) | 39 scenario-anchored color themes — dark, light, OLED, Postgres homage, `Sentinel` prod/staging/dev. MIT. [Install ↗](https://marketplace.visualstudio.com/items?itemName=ric-v.nexql-themes) · [Preview ↗](https://nexql-themes.astrx.dev/) |
-| [**NexQL-site**](https://github.com/NexQL-OSS/NexQL-site) | The public site and docs behind [nexql.astrx.dev](https://nexql.astrx.dev/). |
+| [**core**](https://github.com/NexQL-OSS/core) | The VS Code extension — explorer, SQL notebooks, dashboard, table designer, safety layer. MIT. [Install ↗](https://marketplace.visualstudio.com/items?itemName=ric-v.postgres-explorer) |
+| [**vsc-themes**](https://github.com/NexQL-OSS/vsc-themes) | 39 scenario-anchored color themes — dark, light, OLED, Postgres homage, `Sentinel` prod/staging/dev. MIT. [Install ↗](https://marketplace.visualstudio.com/items?itemName=ric-v.nexql-themes) · [Preview ↗](https://nexql-themes.astrx.dev/) |
+| [**website**](https://github.com/NexQL-OSS/website) | The public site and docs behind [nexql.astrx.dev](https://nexql.astrx.dev/). |
 | [**.github**](https://github.com/NexQL-OSS/.github) | This profile and org-wide health files. |
-| **NexQL-Pro** `private` | Premium add-on — AI chat, MCP server, Plan Studio, backup/restore, schema designer. Builds only against a core checkout. |
-| **NexQL-Backend** `private` | License, payment, and cloud-sync API. |
+| **pro** `private` | Premium add-on — AI chat, MCP server, Plan Studio, backup/restore, schema designer. Builds only against a core checkout. |
+| **backend** `private` | License, payment, and cloud-sync API. |
 
 ---
 
@@ -108,13 +108,13 @@ nexql=# \dt
 ```mermaid
 flowchart LR
     subgraph editor["VS Code / Open VSX"]
-        core["NexQL-core<br/><i>MIT extension</i>"]
-        themes["NexQL-Themes<br/><i>39 themes</i>"]
+        core["core<br/><i>MIT extension</i>"]
+        themes["vsc-themes<br/><i>39 themes</i>"]
     end
 
-    pro["NexQL-Pro<br/><i>private add-on</i>"]
-    backend["NexQL-Backend<br/><i>license · payment · sync</i>"]
-    site["NexQL-site<br/><i>nexql.astrx.dev</i>"]
+    pro["pro<br/><i>private add-on</i>"]
+    backend["backend<br/><i>license · payment · sync</i>"]
+    site["website<br/><i>nexql.astrx.dev</i>"]
     pg[("PostgreSQL<br/>Neon · Supabase · Timescale · Yugabyte")]
     agents["MCP clients<br/><i>Copilot · Cursor · Claude</i>"]
 
@@ -211,9 +211,9 @@ a database — the explorer, notebooks, and dashboard are available immediately.
 
 <div align="center">
 
-**[Documentation](https://nexql.astrx.dev/)** · **[Theme gallery](https://nexql-themes.astrx.dev/)** · **[Report an issue](https://github.com/NexQL-OSS/NexQL-core/issues)** · **[support@astrx.dev](mailto:support@astrx.dev)**
+**[Documentation](https://nexql.astrx.dev/)** · **[Theme gallery](https://nexql-themes.astrx.dev/)** · **[Report an issue](https://github.com/NexQL-OSS/core/issues)** · **[support@astrx.dev](mailto:support@astrx.dev)**
 
-<sub>NexQL-core and NexQL-Themes are MIT. NexQL-Pro and NexQL-Backend are proprietary.<br/>
+<sub>core and vsc-themes are MIT. pro and backend are proprietary.<br/>
 Built for people who want power, elegance, and speed — all inside the editor.</sub>
 
 ```console
