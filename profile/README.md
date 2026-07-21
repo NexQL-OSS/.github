@@ -1,66 +1,220 @@
-# NexQL for VS Code
+<div align="center">
 
-<p align="center">
-  <strong>A modern Postgres & Postgres-based database client for VS Code and Open VSX.</strong>
-</p>
+# NexQL
 
-<p align="center">
-  Built with the <em>NexQL philosophy</em>: sharp workflows, beautiful visuals, and developer-first UX.
-</p>
+### Postgres tooling that lives where you code
 
----
+<em>Notebooks, dashboards, schema design, and AI — inside VS Code, never beside it.</em>
 
-## Why NexQL?
+<br/>
 
-NexQL is designed for developers who live in their editor and want a complete database experience without context switching.
+[![Marketplace](https://img.shields.io/visual-studio-marketplace/v/ric-v.postgres-explorer?style=for-the-badge&logo=visualstudiocode&logoColor=white&label=marketplace&color=0066CC)](https://marketplace.visualstudio.com/items?itemName=ric-v.postgres-explorer)
+[![Downloads](https://img.shields.io/visual-studio-marketplace/d/ric-v.postgres-explorer?style=for-the-badge&logo=visualstudiocode&logoColor=white&color=2ECC71)](https://marketplace.visualstudio.com/items?itemName=ric-v.postgres-explorer)
+[![Rating](https://img.shields.io/visual-studio-marketplace/r/ric-v.postgres-explorer?style=for-the-badge&logo=visualstudiocode&logoColor=white&color=F39C12)](https://marketplace.visualstudio.com/items?itemName=ric-v.postgres-explorer)
+[![Open VSX](https://img.shields.io/open-vsx/v/ric-v/nexql-themes?style=for-the-badge&logo=eclipseide&logoColor=white&label=open%20vsx&color=7C3AED)](https://open-vsx.org/extension/ric-v/nexql-themes)
+[![License](https://img.shields.io/badge/core-MIT-informational?style=for-the-badge)](https://github.com/NexQL-OSS/NexQL-core/blob/main/LICENSE)
 
-- ⚡ **Feature-rich by design** — one of the most complete capabilities among VS Code DB clients
-- 🧠 **AI Assistance** — intelligent workflows to move faster with less friction
-- 🎨 **Modern UX** — clean, focused, and polished interface for daily heavy use
-- 🐘 **Postgres first** — purpose-built for PostgreSQL and compatible Postgres-based databases
-- 🌍 **Works across ecosystems** — available for **VS Code** and **Open VSX**
+[**Docs**](https://nexql.astrx.dev/) · [**Themes preview**](https://nexql-themes.astrx.dev/) · [**Issues**](https://github.com/NexQL-OSS/NexQL-core/issues) · [**support@astrx.dev**](mailto:support@astrx.dev)
+
+</div>
 
 ---
 
-## Core Experience
+## Mission
 
-### Query Like a Pro
-- Smart query workflows
-- Structured database exploration
-- Fast iteration for development and debugging
+```console
+nexql=# SELECT mission FROM org;
 
-### Designed for Real Teams
-- Consistent experience from local dev to production access workflows
-- Friendly for both backend engineers and full-stack developers
-
-### AI + Database Workflow
-- Ask, refine, and execute with contextual assistance
-- Reduce repetitive SQL tasks and speed up exploration
+                                    mission
+--------------------------------------------------------------------------------
+ Give developers a complete Postgres workflow without ever leaving the editor —
+ fast to reach for, safe against production, and honest about what a query will
+ do before it runs.
+(1 row)
+```
 
 ---
 
-## Nexql Theme Ecosystem
+## Objectives
 
-NexQL also includes **[Nexql-theme](https://github.com/NexQL-OSS/nexql-theme)** — a dedicated theme collection for VS Code inspired by the same philosophy:
+```console
+nexql=# SELECT id, objective, why FROM objectives ORDER BY id;
 
-- Clarity over noise
-- Contrast with comfort
-- Focus that lasts for long coding sessions
-
-If you love the NexQL workflow, pair it with Nexql-theme for a complete visual + productivity setup.
+ id |      objective       |                            why
+----+----------------------+------------------------------------------------------------
+  1 | Editor-native        | Context switching to a separate GUI costs more than the
+    |                      | query itself. The database belongs in the same window.
+  2 | Safe by default      | Prod is one dropdown away from dev. Tag it, gate it, warn
+    |                      | before the statement, not after the incident.
+  3 | AI with real context | Schema-aware assistance beats generic SQL autocomplete.
+    |                      | The model should see your tables, not guess them.
+  4 | Open core            | The client is MIT and stays MIT. Premium is additive,
+    |                      | never a paywall across what already worked.
+(4 rows)
+```
 
 ---
 
-## Inspiration
+## Principles
 
-NexQL’s visual direction and experience language are inspired by:  
-🔗 https://nexql.astrx.dev/
+```console
+nexql=# \d principles
+```
+
+| Principle | What it means in practice |
+| --- | --- |
+| **Vibrancy in the dark** | Near-black and warm-paper foundations with high-contrast syntax. Low eye strain without going gray and lifeless. |
+| **Fluid integration** | SQL, data, and application code share one editor and one visual system — no seams between the tools. |
+| **Energy and flow** | A cool → warm gradient mirrors scan rhythm: structure first, data last. Color guides the eye without shouting. |
+| **Developer-first precision** | Built for real coding nuance — keywords, types, results, errors. Every hue and every affordance earns its place. |
+| **Destructive is explicit** | Read-only modes, auto-LIMIT, risk scoring, commit confirmation. Nothing irreversible happens by accident. |
+| **Quiet by default** | Chrome stays calm; signal stays loud. One reserved accent for "something is wrong." |
 
 ---
 
-## Follow the Project
+## Repositories
 
-- GitHub Organization: https://github.com/NexQL-OSS
-- Theme Repository: https://github.com/NexQL-OSS/nexql-theme
+```console
+nexql=# \dt
 
-> NexQL is built for people who want power, elegance, and speed — all inside the editor.
+              List of relations
+     Name      |   Type    | Access  |  License
+---------------+-----------+---------+-----------
+ NexQL-core    | extension | public  | MIT
+ NexQL-Themes  | themes    | public  | MIT
+ NexQL-site    | website   | public  | —
+ .github       | meta      | public  | Apache-2.0
+ NexQL-Pro     | addon     | private | proprietary
+ NexQL-Backend | api       | private | proprietary
+(6 rows)
+```
+
+| Repo | What it is |
+| --- | --- |
+| [**NexQL-core**](https://github.com/NexQL-OSS/NexQL-core) | The VS Code extension — explorer, SQL notebooks, dashboard, table designer, safety layer. MIT. [Install ↗](https://marketplace.visualstudio.com/items?itemName=ric-v.postgres-explorer) |
+| [**NexQL-Themes**](https://github.com/NexQL-OSS/NexQL-Themes) | 39 scenario-anchored color themes — dark, light, OLED, Postgres homage, `Sentinel` prod/staging/dev. MIT. [Install ↗](https://marketplace.visualstudio.com/items?itemName=ric-v.nexql-themes) · [Preview ↗](https://nexql-themes.astrx.dev/) |
+| [**NexQL-site**](https://github.com/NexQL-OSS/NexQL-site) | The public site and docs behind [nexql.astrx.dev](https://nexql.astrx.dev/). |
+| [**.github**](https://github.com/NexQL-OSS/.github) | This profile and org-wide health files. |
+| **NexQL-Pro** `private` | Premium add-on — AI chat, MCP server, Plan Studio, backup/restore, schema designer. Builds only against a core checkout. |
+| **NexQL-Backend** `private` | License, payment, and cloud-sync API. |
+
+---
+
+## How it fits together
+
+```mermaid
+flowchart LR
+    subgraph editor["VS Code / Open VSX"]
+        core["NexQL-core<br/><i>MIT extension</i>"]
+        themes["NexQL-Themes<br/><i>39 themes</i>"]
+    end
+
+    pro["NexQL-Pro<br/><i>private add-on</i>"]
+    backend["NexQL-Backend<br/><i>license · payment · sync</i>"]
+    site["NexQL-site<br/><i>nexql.astrx.dev</i>"]
+    pg[("PostgreSQL<br/>Neon · Supabase · Timescale · Yugabyte")]
+    agents["MCP clients<br/><i>Copilot · Cursor · Claude</i>"]
+
+    core -->|"direct connection"| pg
+    pro -.->|"bundled at build as @nexql/pro"| core
+    core -->|"license check"| backend
+    site -->|"checkout"| backend
+    core -->|"read-only tools"| agents
+    themes -.->|"shared design language"| core
+```
+
+Core ships standalone and stays fully usable on its own. Pro is compiled in only for premium
+builds — the free VSIX is CI-verified to contain no premium code.
+
+---
+
+## What you get
+
+⚡ **SQL notebooks** · 📊 **live dashboard** · 🌳 **database explorer** · 🏗️ **visual table designer** · 🛡️ **query safety analyzer** · 🤖 **schema-aware AI** · 🔌 **MCP server**
+
+<details>
+<summary><b>Query &amp; notebooks</b></summary>
+
+- Interactive SQL notebooks with per-cell connections and AI assistance
+- Notebook manager with searchable picker and metadata context
+- Saved queries — tag-based organization, connection restore, edit &amp; reuse
+- EXPLAIN CodeLens — one-click plan analysis inline
+- Advanced result grid — column stats, transpose view, filtering, sliding-window streaming for large `SELECT`s, configurable `bytea` display, in-grid editing with explicit commit confirmation
+- Historical query performance tracking with degradation alerts
+
+</details>
+
+<details>
+<summary><b>Explore &amp; design</b></summary>
+
+- Tree explorer for tables, views, functions, types, and foreign data wrappers
+- Visual table designer — create and edit tables through a full GUI
+- Index &amp; constraint manager
+- Definition viewer with toggleable SQL preview, copy/edit workflows, routine scaffolding
+- Object operations — CRUD, scripts, `VACUUM` / `ANALYZE` / `REINDEX`, plus triggers, sequences, domains, rules, partitions, publications, event triggers, tablespaces, aggregates
+- Table intelligence — profile, size, activity monitor, index usage, bloat detection
+- Schema intelligence — schema search, index advisor, migration generator
+
+</details>
+
+<details>
+<summary><b>Safety</b></summary>
+
+- Environment tagging — 🔴 PROD · 🟡 STAGING · 🟢 DEV, with status-bar risk indicators
+- Read-only mode enforcement per connection
+- Query safety analyzer with risk scoring before execution
+- Auto-LIMIT on `SELECT` (configurable, default 1000 rows)
+- Credentials stored in VS Code SecretStorage — never in plaintext settings
+
+</details>
+
+<details>
+<summary><b>AI &amp; MCP</b></summary>
+
+- Zero-config NexQL Free AI (Smart / Engineer / Architect tiers), plus GitHub Models, OpenAI, Anthropic, Gemini, and VS Code LM
+- Generate, optimize, explain, and analyze with guided follow-ups
+- Drag tables, columns, functions, notebooks, or saved queries into the assistant as `@mentions`
+- Vision AI — paste or upload images to vision-capable providers
+- SQL Assistant in editor tabs, multiple assistant tabs at once
+- MCP server — expose your database as read-only tools to Copilot, Cursor, Claude Desktop, and other MCP agents
+
+</details>
+
+<details>
+<summary><b>Data movement</b></summary>
+
+- Export results to CSV, JSON, or Excel
+- Smart Paste — context-aware clipboard actions for SQL, CSV, and JSON
+- Foreign data wrappers — manage foreign servers, user mappings, and foreign tables
+- Works with PostgreSQL and Postgres-compatible engines: Neon, Supabase, TimescaleDB, YugabyteDB
+
+</details>
+
+---
+
+## Get started
+
+```console
+nexql=# \i install.sql
+
+ext install ric-v.postgres-explorer   -- the extension
+ext install ric-v.nexql-themes        -- the themes
+```
+
+Or open the Extensions panel and search **NexQL**. Then run `NexQL: Add Connection` and point it at
+a database — the explorer, notebooks, and dashboard are available immediately.
+
+---
+
+<div align="center">
+
+**[Documentation](https://nexql.astrx.dev/)** · **[Theme gallery](https://nexql-themes.astrx.dev/)** · **[Report an issue](https://github.com/NexQL-OSS/NexQL-core/issues)** · **[support@astrx.dev](mailto:support@astrx.dev)**
+
+<sub>NexQL-core and NexQL-Themes are MIT. NexQL-Pro and NexQL-Backend are proprietary.<br/>
+Built for people who want power, elegance, and speed — all inside the editor.</sub>
+
+```console
+nexql=# \q
+```
+
+</div>
