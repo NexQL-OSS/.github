@@ -87,9 +87,10 @@ nexql=# \dt
  vsc-themes    | themes    | public  | MIT
  website       | website   | public  | —
  .github       | meta      | public  | Apache-2.0
+ mcp           | server    | public  | GPL-3.0-only
  pro           | addon     | private | proprietary
  backend       | api       | private | proprietary
-(6 rows)
+(7 rows)
 ```
 
 | Repo | What it is |
@@ -98,7 +99,8 @@ nexql=# \dt
 | [**vsc-themes**](https://github.com/NexQL-OSS/vsc-themes) | 39 scenario-anchored color themes — dark, light, OLED, Postgres homage, `Sentinel` prod/staging/dev. MIT. [Install ↗](https://marketplace.visualstudio.com/items?itemName=ric-v.nexql-themes) · [Preview ↗](https://nexql-themes.astrx.dev/) |
 | [**website**](https://github.com/NexQL-OSS/website) | The public site and docs behind [nexql.astrx.dev](https://nexql.astrx.dev/). |
 | [**.github**](https://github.com/NexQL-OSS/.github) | This profile and org-wide health files. |
-| **pro** `private` | Premium add-on — AI chat, MCP server, Plan Studio, backup/restore, schema designer. Builds only against a core checkout. |
+| [**mcp**](https://github.com/NexQL-OSS/mcp) | Standalone Postgres MCP server (Rust) — schema-aware, read-only by default, installable in Claude Desktop, Cursor, VS Code Copilot, Zed, and other MCP clients. GPL-3.0-only from v0.2.0 (v0.1.6 and earlier were Apache-2.0). |
+| **pro** `private` | Premium add-on — AI chat, in-process MCP server, Plan Studio, backup/restore, schema designer. Builds only against a core checkout. |
 | **backend** `private` | License, payment, and cloud-sync API. |
 
 ---
@@ -113,6 +115,7 @@ flowchart LR
     end
 
     pro["pro<br/><i>private add-on</i>"]
+    mcp["mcp<br/><i>public · GPL-3.0-only</i>"]
     backend["backend<br/><i>license · payment · sync</i>"]
     site["website<br/><i>nexql.astrx.dev</i>"]
     pg[("PostgreSQL<br/>Neon · Supabase · Timescale · Yugabyte")]
@@ -120,14 +123,16 @@ flowchart LR
 
     core -->|"direct connection"| pg
     pro -.->|"bundled at build as @nexql/pro"| core
+    core -->|"spawns bundled binary (stdio)"| mcp
+    mcp -->|"read-only tools"| agents
     core -->|"license check"| backend
     site -->|"checkout"| backend
-    core -->|"read-only tools"| agents
     themes -.->|"shared design language"| core
 ```
 
 Core ships standalone and stays fully usable on its own. Pro is compiled in only for premium
-builds — the free VSIX is CI-verified to contain no premium code.
+builds — the free VSIX is CI-verified to contain no premium code. `mcp` is a separate, independently
+licensed repo (GPL-3.0-only) — core invokes its binary as a subprocess, keeping the programs separate.
 
 ---
 
