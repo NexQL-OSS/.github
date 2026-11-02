@@ -6,6 +6,8 @@
 
 <em>Notebooks, dashboards, schema design, and AI — inside VS Code, never beside it.</em>
 
+<sub>Formerly <b>PgStudio</b>.</sub>
+
 <br/>
 
 [![Marketplace](https://img.shields.io/visual-studio-marketplace/v/ric-v.postgres-explorer?style=for-the-badge&logo=visualstudiocode&logoColor=white&label=marketplace&color=0066CC)](https://marketplace.visualstudio.com/items?itemName=ric-v.postgres-explorer)
@@ -14,7 +16,7 @@
 [![Open VSX](https://img.shields.io/open-vsx/v/ric-v/nexql-themes?style=for-the-badge&logo=eclipseide&logoColor=white&label=open%20vsx&color=7C3AED)](https://open-vsx.org/extension/ric-v/nexql-themes)
 [![License](https://img.shields.io/badge/core-MIT-informational?style=for-the-badge)](https://github.com/NexQL-OSS/core/blob/main/LICENSE)
 
-[**Docs**](https://nexql.astrx.dev/) · [**Themes preview**](https://nexql-themes.astrx.dev/) · [**Issues**](https://github.com/NexQL-OSS/core/issues) · [**support@astrx.dev**](mailto:support@astrx.dev)
+[**Docs**](https://nexql.astrx.dev/) · [**MCP docs**](https://nexql-mcp.astrx.dev/) · [**Themes preview**](https://nexql-themes.astrx.dev/) · [**Issues**](https://github.com/NexQL-OSS/core/issues) · [**support@astrx.dev**](mailto:support@astrx.dev)
 
 
 <a href="https://www.producthunt.com/products/nexql?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-nexql" target="_blank" rel="noopener noreferrer"><img alt="NexQL - AI-native Postgres tooling, All in VS Code | Product Hunt" width="150" height="34" src="https://api.producthunt.com/widgets/embed-image/v1/featured.png?post_id=1198080&amp;theme=neutral&amp;t=1784198674691"></a>
@@ -99,7 +101,7 @@ nexql=# \dt
 | [**vsc-themes**](https://github.com/NexQL-OSS/vsc-themes) | 39 scenario-anchored color themes — dark, light, OLED, Postgres homage, `Sentinel` prod/staging/dev. MIT. [Install ↗](https://marketplace.visualstudio.com/items?itemName=ric-v.nexql-themes) · [Preview ↗](https://nexql-themes.astrx.dev/) |
 | [**website**](https://github.com/NexQL-OSS/website) | The public site and docs behind [nexql.astrx.dev](https://nexql.astrx.dev/). |
 | [**.github**](https://github.com/NexQL-OSS/.github) | This profile and org-wide health files. |
-| [**mcp**](https://github.com/NexQL-OSS/mcp) | Standalone Postgres MCP server (Rust) — schema-aware, read-only by default, installable in Claude Desktop, Cursor, VS Code Copilot, Zed, and other MCP clients. GPL-3.0-only from v0.2.0 (v0.1.6 and earlier were Apache-2.0). |
+| [**mcp**](https://github.com/NexQL-OSS/mcp) | Standalone Postgres MCP server (Rust) — schema-aware, read-only by default, installable in Claude Desktop, Cursor, VS Code Copilot, Zed, and other MCP clients. GPL-3.0-only from v0.2.0 (v0.1.6 and earlier were Apache-2.0). [Docs ↗](https://nexql-mcp.astrx.dev/) |
 | **pro** `private` | Premium add-on — AI chat, in-process MCP server, Plan Studio, backup/restore, schema designer. Builds only against a core checkout. |
 | **backend** `private` | License, payment, and cloud-sync API. |
 
@@ -216,9 +218,10 @@ a database — the explorer, notebooks, and dashboard are available immediately.
 
 <div align="center">
 
-**[Documentation](https://nexql.astrx.dev/)** · **[Theme gallery](https://nexql-themes.astrx.dev/)** · **[Report an issue](https://github.com/NexQL-OSS/core/issues)** · **[support@astrx.dev](mailto:support@astrx.dev)**
+**[Documentation](https://nexql.astrx.dev/)** · **[MCP docs](https://nexql-mcp.astrx.dev/)** · **[Theme gallery](https://nexql-themes.astrx.dev/)** · **[Report an issue](https://github.com/NexQL-OSS/core/issues)** · **[support@astrx.dev](mailto:support@astrx.dev)**
 
-<sub>core and vsc-themes are MIT. pro and backend are proprietary.<br/>
+<sub>core and vsc-themes are MIT. mcp is GPL-3.0-only. pro and backend are proprietary.<br/>
+Maintained by <a href="https://me.astrx.dev">Richie Varghese</a>.<br/>
 Built for people who want power, elegance, and speed — all inside the editor.</sub>
 
 ```console
